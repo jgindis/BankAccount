@@ -22,4 +22,8 @@ public class BankAccount {
     return ID;
   }
 
+  public static double balance() {
+    return balance;
+  }
+
 }
