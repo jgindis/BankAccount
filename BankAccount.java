@@ -18,4 +18,8 @@ public class BankAccount {
     double balance = 0;
   }
 
+  public static int accountID() {
+    return ID;
+  }
+
 }
