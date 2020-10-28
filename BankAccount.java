@@ -1,29 +1,32 @@
-// class name:
-//         BankAccount
-//
-// Instance variables required (all private):
-//       balance - a double
-//       accountID - int  (the account number is just an integer)
-//       password - String
-
 public class BankAccount {
 
-  public static void main(String[] args) {
-
-  }
+  private int ID;
+  private String pw;
+  private double balance;
 
   public BankAccount(int accountID, String password) {
-    int ID = accountID;
-    String pw = password;
-    double balance = 0;
+    ID = accountID;
+    pw = password;
+    balance = 0;
   }
 
-  public static int accountID() {
+  public double getBalance() {
+    return balance;
+  }
+
+  public int getAccountID() {
     return ID;
   }
 
-  public static double balance() {
-    return balance;
+  public void setPW(String password) {
+    pw = password;
+  }
+
+  public boolean deposit(double amount) {
+    if (amount > 0) {
+      balance += amount;
+      return true;
+    } else return false;
   }
 
 }
