@@ -38,4 +38,9 @@ public class BankAccount {
     else return false;
   }
 
+  public String toString() {
+    String str = ID + "\t" + pw;
+    return str;
+  }
+
 }
