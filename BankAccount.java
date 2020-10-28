@@ -23,14 +23,14 @@ public class BankAccount {
   }
 
   public boolean deposit(double amount) {
-    if (amount > 0) {
+    if (amount >= 0) {
       balance += amount;
       return true;
     } else return false;
   }
 
   public boolean withdraw(double amount) {
-    if (amount <= 0) return false;
+    if (amount < 0) return false;
     else if (amount <= balance) {
       balance -= amount;
       return true;
@@ -39,7 +39,7 @@ public class BankAccount {
   }
 
   public String toString() {
-    String str = ID + "\t" + pw;
+    String str = ID + "\t" + balance;
     return str;
   }
 
